@@ -1,8 +1,9 @@
 import {App, IonicApp, Platform} from 'ionic-framework/ionic';
 
-import {GettingStartedPage} from './pages/getting-started/getting-started';
-import {ListPage} from './pages/list/list';
-import {GridPage} from './pages/grid/grid';
+import {NewGamePage} from './pages/new-game/new-game';
+
+import {Game} from './classes/Game';
+import {Timer} from './components/timer/timer';
 
 // https://angular.io/docs/ts/latest/api/core/Type-interface.html
 import {Type} from 'angular2/core';
@@ -12,19 +13,12 @@ import {Type} from 'angular2/core';
   config: {} // http://ionicframework.com/docs/v2/api/config/Config/
 })
 class MyApp {
-  rootPage: Type = GettingStartedPage;
-  pages: Array<{title: string, component: Type}>
+  rootPage: Type = NewGamePage;
+  pages: Array<{title: string, component: Type}>;
+  games: Game[] = []
 
   constructor(private app: IonicApp, private platform: Platform) {
     this.initializeApp();
-
-    // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Getting Started', component: GettingStartedPage },
-      { title: 'List', component: ListPage },
-      { title: 'List', component: ListPage },
-      { title: 'Grid Icons', component: GridPage }
-    ];
 
   }
 

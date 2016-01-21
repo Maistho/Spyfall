@@ -1,12 +1,13 @@
 <ion-menu [content]="content">
 
   <ion-toolbar>
-    <ion-title>Pages</ion-title>
+    <ion-title>Spyfall</ion-title>
   </ion-toolbar>
 
   <ion-content>
     <ion-list>
-      <button menuClose ion-item *ngFor="#p of pages" (click)="openPage(p)">
+      <button menuClose ion-item (click)="openPage(newGame)">New Game</button>
+      <button menuClose ion-item *ngFor="#game of games" (click)="openPage(game)">
         {{p.title}}
       </button>
     </ion-list>

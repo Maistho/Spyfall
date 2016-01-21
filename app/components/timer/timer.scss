@@ -1,0 +1,10 @@
+timer {
+	$size: 200px;
+	height: $size;
+	width: $size;
+	margin: 0 auto;
+	display: block;
+	background-color: map-get($colors, primary);
+	border-radius: 100%;
+
+}

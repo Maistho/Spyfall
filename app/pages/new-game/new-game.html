@@ -1,0 +1,19 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Play!</ion-title>
+</ion-navbar>
+
+
+<ion-content padding class="new-game">
+
+	<timer [time]="8*60*1000"></timer>
+
+  <ion-list>
+    <ion-input *ngFor="#player of game.players">
+      <input placeholder="Name" type="text">
+    </ion-input>
+    <button *ngIf="game.players.length < 8" full positive (click)="game.addPlayer()">Add player</button>
+  </ion-list>
+</ion-content>
