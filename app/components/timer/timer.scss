@@ -4,7 +4,13 @@ timer {
 	width: $size;
 	margin: 0 auto;
 	display: block;
-	background-color: map-get($colors, primary);
-	border-radius: 100%;
-
+	position: relative;
+	.center {
+		margin: 0;
+		position: absolute;
+		display: block;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
 }

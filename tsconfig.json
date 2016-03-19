@@ -12,10 +12,30 @@
     "inlineSources": false
   },
   "files": [
-    "app/app.ts"
+    "app/app.ts",
+    "app/classes/Game.ts",
+    "app/components/player/player.ts",
+    "app/components/round_progress/roundProgress.ts",
+    "app/components/roundProgress/roundProgress.ts",
+    "app/components/roundProgress/roundProgressService.ts",
+    "app/components/timer/timer.ts",
+    "app/pages/getting-started/getting-started.ts",
+    "app/pages/grid/grid.ts",
+    "app/pages/list/list.ts",
+    "app/pages/new-game/new-game.ts",
+    "typings/angular2/angular2.d.ts",
+    "typings/raphael/raphael.d.ts"
+  ],
+  "filesGlob": [
+    "**/*.ts",
+    "**/*.tsx",
+    "!node_modules/**"
   ],
   "exclude": [
     "node_modules"
   ],
-  "compileOnSave": false
+  "compileOnSave": false,
+  "atom": {
+    "rewriteTsconfig": true
+  }
 }
